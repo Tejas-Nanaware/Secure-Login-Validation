@@ -1,8 +1,8 @@
 <?php
-        //Start session
-        session_start();
-        //Include database connection details
+        require_once "functions.php";
         require_once('connect.php');
+        //Custom secure session
+        sec_session_start();
      
         //Array to store validation errors
         $errmsg_arr = array();
@@ -47,4 +47,5 @@
         {
             echo "failure";
         }
+        session_destroy();
 ?>
